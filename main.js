@@ -8,14 +8,15 @@ class item{
     constructor(itemName){
         //Create the item div
 
-    this.createDiv(itemName);
-}
+        this.createDiv(itemName);
+    }
 createDiv(itemName){
     let input = document.createElement('input');
     input.value=itemName;
     input.disabled=true;
     input.classList.add('item_input');
     input.type="text";
+
    
     let itemBox =document.createElement('div');
     itemBox.classList.add('item');
@@ -40,8 +41,13 @@ createDiv(itemName){
 
     editButton.addEventListener('click',() => this.edit (input));
     removeButton.addEventListener('click',() =>  this.remove (itemBox));
+    this.search('Value');
 }
 
+
+search(value){
+    console.log(container.children);
+}
 
 
 edit(input)
@@ -52,7 +58,7 @@ edit(input)
     remove(item){
         container.removeChild(item);
     }
-    }
+}
     
     function check(){ 
         if(input.value != "") {
