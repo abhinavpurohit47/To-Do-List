@@ -62,6 +62,14 @@ edit(input)
         }
     }
 
+    // function to add todos to local storage
+function addToLocalStorage(todos) {
+    // conver the array to string then store it.
+    localStorage.setItem('todos', JSON.stringify(todos));
+    // render them to screen
+    renderTodos(todos);
+  }
+
   
 
 
