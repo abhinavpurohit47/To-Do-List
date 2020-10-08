@@ -11,6 +11,8 @@ body {
 }
 header {
   font-size: 2rem;
+  color: aquamarine;
+  font-family: cursive;
 }
 
 header,
