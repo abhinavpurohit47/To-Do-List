@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
-  
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>TODO List</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <link rel="stylesheet" href="css/all.css">
-    <!--<link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">-->
-    
-   <!--<script src="https://kit.fontawesome.com/a81368914c.js"></script>-->
-</head>
-<body>
-    <h1><span class="stylings">TODO </span>List</h1>
-    <div class="inputDiv">
-    	   <input type="text" class="input" placeholder="What Do You Want to Do...?">
-    	   <button class="addButton"><i class="fas fa-plus"></i></button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Abhinav's Todo List</h1>
+    </header>
+    <form>
+      <input type="text" class="todo-input" ></input>
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      
+      <input type="text" placeholder="Search.." class="todo-search"></input>
+
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
     </div>
-    <div class="container">
-        <div class="item">
-            <!-- <input type="text" class="item_input" value="Wake Up Early" disabled>
-            
-            <button class="editButton">Edit</button>
-            <button class="removeButton">Remove</button>
-        </div>
-        <div class="item">
-            <input type="text" class="item_input" value="Exercise" disabled>
-            
-            <button class="editButton">Edit</button>
-            <button class="removeButton">Remove</button>
-        </div>-->
-    </div>
-    <script src="main.js"></script>
-</body>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
