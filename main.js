@@ -17,28 +17,21 @@ function addTodo(e) {
   
  // if(todoInput.value){
     e.preventDefault();
-    /*todo-list.innerHTML+='<li>'+todo-input.value+'</li>'
-    store();
-    todo-input.value = "";
-  }else{
-      alert("Cannot add empty task!!")
-  }
-}*/
- /*function store() {
-        window.localStorage.myitems = list.innerHTML;
-    }
-    */
+   
   //Create todo div
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
   //Create list
   const newTodo = document.createElement("li");
   newTodo.innerText = todoInput.value;
-  //Save to local - do this last
-  //Save to local
-  saveLocalTodos(todoInput.value);
-  //
-  newTodo.classList.add("todo-item");
+  var c=todoInput.value;
+  function check(c){
+    if(c=="")
+    {alert("Value cannot be empty");
+     }
+  else
+  {saveLocalTodos(todoInput.value);
+    newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   todoInput.value = "";
   //Create Completed Button
@@ -54,7 +47,15 @@ function addTodo(e) {
   //attach final Todo
   todoList.appendChild(todoDiv);
 }
-
+return c;
+  }
+check(c);
+  //Save to local - do this last
+  //Save to local
+  
+  //
+  
+}
 function deleteTodo(e) {
   const item = e.target;
 
